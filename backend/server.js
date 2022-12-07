@@ -119,7 +119,6 @@ app.post("/deleteStudent", async function (req, res) {
     "Request received to delete student. Req body: " + JSON.stringify(reqBody)
   );
   let data = await deleteStudent(reqBody.id);
-
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
 });
